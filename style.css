@@ -156,25 +156,37 @@ h1 {
 }
 
 .image {
-    position: absolute;
+    display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.image.active {
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 .fa-angle-left {
     position: relative;
     right: 500px;
     top: 250px;
+    cursor: pointer;
 }
 
 .fa-angle-right {
     position: relative;
     left: 500px;
     top: 250px;
+    cursor: pointer;
 }
 
 .navigation {
     position: relative;
     top: 470px;
+    cursor: pointer;
 }
