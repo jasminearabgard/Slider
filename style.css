@@ -155,15 +155,14 @@ h1 {
     display: flex;
 }
 
-.image {
-    display: none;
+.item {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
 }
 
-.image.active {
+.item.active {
     display: block;
     top: 50%;
     left: 50%;

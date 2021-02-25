@@ -13,19 +13,25 @@
     <div class="container">
         <h1>Slide show</h1>
         <div class="slides">
-            <i class="fa fa-angle-left fa-4x" aria-hidden="true" onclick="plus(1)"></i>
-            <img class="image" src="C:\Users\AS\Desktop\a\Slider\images\nightsky.jpg" alt="nightsky" height="500px" width="800px">
-            <img class="image" src=" C:\Users\AS\Desktop\a\Slider\images\human.jpg" alt="human" height="500px" width="800px">
-            <img class="image" src="C:\Users\AS\Desktop\a\Slider\images\dreamy.jpg" alt="dreamy" height="500px" width="800px">
-            <i class="fa fa-angle-right fa-4x" aria-hidden="true" onclick="plus(-1)"></i>
+            <i class="fa fa-angle-left fa-4x" aria-hidden="true" onclick=prev()></i>
+            <div class="item active">
+                <img src="images/nightsky.jpg" alt="nightsky" height="500px" width="800px">
+            </div>
+            <!-- <div class="item">
+                <img src="images/human.jpg" alt="human" height="500px" width="800px">
+            </div>
+            <div class="item">
+                <img src="images/dreamy.jpg" alt="dreamy" height="500px" width="800px">
+            </div> -->
+            <i class="fa fa-angle-right fa-4x" aria-hidden="true" onclick="next()"></i>
         </div>
         <div class="navigation">
-            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\dreamy.jpg" alt="dreamy" height="30px" width="30px">
-            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\human.jpg" alt="human" height="30px" width="30px">
-            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\nightsky.jpg" alt="nightsky" height="30px." width="30px">
+            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\dreamy.jpg" alt="dreamy" height="30px" width="30px" onclick="slide(1)">
+            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\human.jpg" alt="human" height="30px" width="30px" onclick="slide(2)">
+            <img class="dot" src="C:\Users\AS\Desktop\a\Slider\images\nightsky.jpg" alt="nightsky" height="30px" width="30px" onclick="slide(3)">
         </div>
     </div>
-    <script src="main.js"></script>
+    <script src="main.js "></script>
 </body>
 
 </html>
