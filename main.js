@@ -1,39 +1,39 @@
 //array
-
-let images = ["images/dreamy.jpg", "images/human.jpg", "images/nightsky.jpg"];
-let i;
-let image = images.length;
-let interval = setInterval(next, 3000);
-//prev
-function prev() {
-    for (i = 0; i < image; i++) {
-        i--;
-    }
-    return document.getElementsByClassName("item").src = images[i];
-}
-
-//next
-function next() {
-    for (i = 0; i < image; i++) {
-        i = i + 1;
-        return document.getElementsByClassName("item").src = images[i];
-    }
-}
-
-//current image
-function slide(n) {
-    for (; i < image; i++) {
-        if (n == n) {
-            return document.getElementsByClassName("item").src = images[i];
-        }
-    }
-}
+let sliders = document.querySelectorAll(".item");
+let right = document.querySelector(".fa-angle-right");
+let left = document.querySelector(".fa-angle-left");
+let i = 0;
 
 //interval
+// let interval = setInterval(next(), 3000);
 
-// function timer() {
-//     for (i = 0; i < image; i++) {
-//         i++
-//     }
+//prev&next
+right.addEventListener("click", () => {
+    i++;
 
-// }
+    sliders.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    if (i >= sliders.length) {
+        i = 0;
+    }
+
+    sliders[i].classList.add("active");
+
+});
+
+left.addEventListener("click", () => {
+    i--;
+
+    sliders.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    if (i < 0) {
+        i = sliders.length - 1;
+    }
+
+    sliders[i].classList.add("active");
+
+});

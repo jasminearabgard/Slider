@@ -160,14 +160,13 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 1;
 }
 
 .item.active {
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    opacity: 1;
 }
 
 .fa-angle-left {
